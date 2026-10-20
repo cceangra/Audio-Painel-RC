@@ -1,15 +1,25 @@
-# Situação da importação — Áudio Painel RC 0.3.0
+# Importação concluída — Áudio Painel RC v0.3.0
 
-O projeto está **parcialmente importado** no GitHub.
+**Situação: concluída em 20/10/2026.**
 
-## Já no repositório
-- Documentação inicial em português, plano de trabalho e .gitignore.
-- Código original `src/interface/componentes.cpp`, `src/incluir/tema.hpp` e `src/incluir/setup.hpp`.
-- Lançadores `iniciar.sh`, `Instalar.sh` e scripts `testar.sh`, `testar-instalacao.sh`.
+Os **77 arquivos** do pacote de fontes organizado foram importados na branch `main` do repositório `cceangra/Audio-Painel-RC`, preservando a estrutura original. O repositório contém **78 arquivos**: os 77 do pacote mais este documento de acompanhamento.
 
-## Ainda faltam
-Os demais módulos em `src/aplicacao/`, `src/audio/`, `src/interface/`, `src/instalador/`, `src/sistema/`, `src/ferramentas/`, `src/testes/`, os cabeçalhos restantes, o script `compilar.sh`, `scripts/`, os recursos `icones/`, `previas/` e documentos originais. O pacote de fontes possui **77 arquivos** no total e o repositório ainda não os contém todos.
+## O que foi publicado
 
-**Não compile, distribua ou crie Release a partir desta cópia parcial.** A cópia ZIP de fontes continua sendo a referência para esta versão até que a importação seja concluída e validada.
+- Código-fonte C++ em `src/aplicacao/`, `src/audio/`, `src/interface/`, `src/sistema/`, `src/instalador/`, `src/ferramentas/` e `src/testes/`.
+- Cabeçalhos em `src/incluir/`.
+- Scripts de compilação, testes, inicialização, configuração, instalação e desinstalação.
+- Ferramentas, cinco ícones SVG, cinco imagens PNG, preferências de exemplo e documentação em português.
+- Workflow `.github/workflows/verificar.yml` para validar alterações no GitHub Actions.
 
-As alterações devem preservar todo o código original e o funcionamento do instalador. Nenhum arquivo do computador foi alterado por esta importação.
+## Conferência da publicação
+
+- Commit de importação: [430e10c](https://github.com/cceangra/Audio-Painel-RC/commit/430e10c5651b942542c77f188283075e4a00058b).
+- [GitHub Actions — compilação e testes aprovados](https://github.com/cceangra/Audio-Painel-RC/actions/runs/39449641180) em Ubuntu 24.04.
+- A branch `main` contém as fontes do pacote completo, não os executáveis distribuídos.
+
+## Limites e próximas etapas
+
+A verificação automatizada foi aprovada, mas não substitui os testes visuais e de dispositivos no Q4OS/Debian 13, Trinity e em outros desktops. Antes de distribuir uma versão binária, valide o funcionamento do instalador e do áudio em uma sessão Linux real.
+
+Para atualizar visual: `src/interface/tema.cpp`. Para regras de áudio: `src/audio/`. Para instalação e remoção: `src/instalador/`.
