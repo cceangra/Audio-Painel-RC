@@ -1,4 +1,4 @@
-# Executáveis e compilação
+# Compilação e artefatos
 /audio-painel-rc
 /Iniciar
 /ARQUIVOS.txt
@@ -10,7 +10,7 @@
 /build/
 /dist/
 
-# Estado local do aplicativo e do instalador
+# Estado local da aplicação ou do instalador
 /instalador/
 /instalacao.json
 /integracoes.json
@@ -21,7 +21,7 @@
 /testes/remocao-*/
 /testes/protecao-*/
 
-# Temporários
+# Arquivos temporários de editores e sistema
 *.swp
 *.swo
 *~

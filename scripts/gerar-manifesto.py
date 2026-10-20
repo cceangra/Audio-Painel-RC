@@ -25,6 +25,7 @@ def arquivos():
         if not folder.is_dir():
             raise SystemExit(f"Diretório ausente: {directory}")
         for file in folder.rglob('*'):
+            # Nunca incluir links nem temporários dos testes.
             if file.is_symlink():
                 raise SystemExit(f"Link simbólico inesperado: {file}")
             if not file.is_file():
@@ -50,7 +51,7 @@ def conteudos():
     checksums = []
     for nome in nomes:
         if nome == CHECKSUMS:
-            continue
+            continue  # Não gerar hash circular do próprio arquivo.
         data = manifest.encode() if nome == MANIFEST else (ROOT / nome).read_bytes()
         checksums.append(f"{hashlib.sha256(data).hexdigest()}  {nome}")
     return manifest, '\n'.join(checksums) + '\n'

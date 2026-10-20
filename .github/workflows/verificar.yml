@@ -1,0 +1,24 @@
+name: Verificar compilação e testes
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verificar:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Obter código
+        uses: actions/checkout@v4
+      - name: Instalar ferramentas de compilação
+        run: sudo apt-get update && sudo apt-get install -y g++ python3
+      - name: Compilar
+        run: bash compilar.sh
+      - name: Validar manifesto
+        run: python3 scripts/gerar-manifesto.py --verificar
+      - name: Testar regras do aplicativo
+        run: bash testar.sh
+      - name: Testar instalador
+        run: bash testar-instalacao.sh
+      - name: Testar simulações de áudio
+        run: bash testar-integracao.sh

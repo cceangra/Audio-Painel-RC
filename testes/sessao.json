@@ -1,0 +1,1055 @@
+[
+  {
+    "id": 37,
+    "type": "PipeWire:Interface:Node",
+    "info": {
+      "state": "idle",
+      "props": {
+        "object.serial": 37,
+        "node.name": "capture.filtro_ruido_noise",
+        "node.description": "Filtro ruído noise",
+        "media.class": "Stream/Input/Audio",
+        "target.object": "alsa_input.pci-0000_00_1b.0.analog-stereo",
+        "node.passive": true
+      },
+      "params": {
+        "Props": [
+          {
+            "volume": 1.0,
+            "mute": false,
+            "channelVolumes": [
+              1.0
+            ],
+            "channelMap": [
+              "MONO"
+            ],
+            "softMute": false,
+            "softVolumes": [
+              1.0
+            ],
+            "monitorMute": false,
+            "monitorVolumes": [
+              1.0
+            ],
+            "params": [
+              "monitor.channel-volumes",
+              false,
+              "channelmix.disable",
+              false,
+              "channelmix.min-volume",
+              0.0,
+              "channelmix.max-volume",
+              10.0,
+              "channelmix.normalize",
+              false,
+              "channelmix.mix-lfe",
+              true,
+              "channelmix.upmix",
+              true,
+              "channelmix.lfe-cutoff",
+              0.0,
+              "channelmix.fc-cutoff",
+              0.0,
+              "channelmix.rear-delay",
+              0.0,
+              "channelmix.stereo-widen",
+              0.0,
+              "channelmix.hilbert-taps",
+              0,
+              "channelmix.upmix-method",
+              "none",
+              "resample.quality",
+              4,
+              "resample.disable",
+              true,
+              "dither.noise",
+              0,
+              "dither.method",
+              "none",
+              "debug.wav-path",
+              "",
+              "channelmix.lock-volumes",
+              false,
+              "audioconvert.filter-graph.disable",
+              false,
+              "audioconvert.filter-graph",
+              ""
+            ]
+          },
+          {
+            "params": [
+              "rnnoise:VAD Threshold (%)",
+              85,
+              "rnnoise:VAD Grace Period (ms)",
+              200,
+              "rnnoise:Retroactive VAD Grace (ms)",
+              0,
+              "rnnoise:Placeholder",
+              0.0,
+              "rnnoise:Placeholder",
+              0.0
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 38,
+    "type": "PipeWire:Interface:Node",
+    "info": {
+      "state": "suspended",
+      "props": {
+        "object.serial": 38,
+        "node.name": "filtro_ruido_noise",
+        "node.description": "Filtro ruído noise",
+        "media.class": "Audio/Source"
+      },
+      "params": {
+        "Props": [
+          {
+            "volume": 1.0,
+            "mute": false,
+            "channelVolumes": [
+              1.0
+            ],
+            "channelMap": [
+              "MONO"
+            ],
+            "softMute": false,
+            "softVolumes": [
+              1.0
+            ],
+            "monitorMute": false,
+            "monitorVolumes": [
+              1.0
+            ],
+            "params": [
+              "monitor.channel-volumes",
+              false,
+              "channelmix.disable",
+              false,
+              "channelmix.min-volume",
+              0.0,
+              "channelmix.max-volume",
+              10.0,
+              "channelmix.normalize",
+              false,
+              "channelmix.mix-lfe",
+              true,
+              "channelmix.upmix",
+              true,
+              "channelmix.lfe-cutoff",
+              0.0,
+              "channelmix.fc-cutoff",
+              0.0,
+              "channelmix.rear-delay",
+              0.0,
+              "channelmix.stereo-widen",
+              0.0,
+              "channelmix.hilbert-taps",
+              0,
+              "channelmix.upmix-method",
+              "none",
+              "resample.quality",
+              4,
+              "resample.disable",
+              true,
+              "dither.noise",
+              0,
+              "dither.method",
+              "none",
+              "debug.wav-path",
+              "",
+              "channelmix.lock-volumes",
+              false,
+              "audioconvert.filter-graph.disable",
+              false,
+              "audioconvert.filter-graph",
+              ""
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 49,
+    "type": "PipeWire:Interface:Device",
+    "info": {
+      "state": null,
+      "props": {
+        "object.serial": 49,
+        "media.class": "Audio/Device",
+        "device.api": "alsa",
+        "device.name": "alsa_card.pci-0000_00_03.0",
+        "device.description": "Áudio interno",
+        "api.alsa.card": 2,
+        "api.alsa.card.name": "HDA Intel HDMI",
+        "api.alsa.path": "hw:2"
+      },
+      "params": {
+        "Profile": [
+          {
+            "index": 1,
+            "name": "output:hdmi-stereo",
+            "description": "Saída Estéreo digital (HDMI)",
+            "priority": 5900,
+            "available": "yes",
+            "classes": [
+              1,
+              [
+                "Audio/Sink",
+                1,
+                "card.profile.devices",
+                [
+                  3
+                ]
+              ]
+            ],
+            "save": false
+          }
+        ],
+        "Route": [
+          {
+            "index": 0,
+            "direction": "Output",
+            "name": "hdmi-output-0",
+            "description": "HDMI / DisplayPort",
+            "priority": 5900,
+            "available": "yes",
+            "info": [
+              8,
+              "port.type",
+              "hdmi",
+              "port.availability-group",
+              "Legacy 1",
+              "device.icon_name",
+              "video-display",
+              "card.profile.port",
+              "0",
+              "device.product.name",
+              "SAMSUNG",
+              "iec958.codecs.detected",
+              "[\"PCM\"]",
+              "route.hw-mute",
+              "false",
+              "route.hw-volume",
+              "false"
+            ],
+            "profiles": [
+              1
+            ],
+            "device": 3,
+            "props": {
+              "mute": false,
+              "channelVolumes": [
+                0.063997,
+                0.063997
+              ],
+              "volumeBase": 1.0,
+              "volumeStep": 1.5e-05,
+              "channelMap": [
+                "FL",
+                "FR"
+              ],
+              "softVolumes": [
+                0.063997,
+                0.063997
+              ],
+              "latencyOffsetNsec": 0,
+              "iec958Codecs": [
+                "PCM"
+              ]
+            },
+            "devices": [
+              3
+            ],
+            "profile": 1,
+            "save": true
+          }
+        ],
+        "EnumRoute": [
+          {
+            "index": 0,
+            "direction": "Output",
+            "name": "hdmi-output-0",
+            "description": "HDMI / DisplayPort",
+            "available": "yes",
+            "profiles": [
+              1
+            ],
+            "devices": [
+              3
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 51,
+    "type": "PipeWire:Interface:Device",
+    "info": {
+      "state": null,
+      "props": {
+        "object.serial": 51,
+        "media.class": "Audio/Device",
+        "device.api": "alsa",
+        "device.name": "alsa_card.pci-0000_00_1b.0",
+        "device.description": "Áudio interno",
+        "api.alsa.card": 1,
+        "api.alsa.card.name": "HDA Intel PCH",
+        "api.alsa.path": "hw:1"
+      },
+      "params": {
+        "Profile": [
+          {
+            "index": 1,
+            "name": "output:analog-stereo+input:analog-stereo",
+            "description": "Duplex estéreo analógico",
+            "priority": 6565,
+            "available": "yes",
+            "classes": [
+              2,
+              [
+                "Audio/Source",
+                1,
+                "card.profile.devices",
+                [
+                  0
+                ]
+              ],
+              [
+                "Audio/Sink",
+                1,
+                "card.profile.devices",
+                [
+                  3
+                ]
+              ]
+            ],
+            "save": false
+          }
+        ],
+        "Route": [
+          {
+            "index": 0,
+            "direction": "Input",
+            "name": "analog-input-internal-mic",
+            "description": "Microfone interno",
+            "priority": 8900,
+            "available": "unknown",
+            "info": [
+              6,
+              "port.type",
+              "mic",
+              "port.availability-group",
+              "Legacy 1",
+              "device.icon_name",
+              "audio-input-microphone",
+              "card.profile.port",
+              "0",
+              "route.hw-mute",
+              "true",
+              "route.hw-volume",
+              "true"
+            ],
+            "profiles": [
+              3,
+              1
+            ],
+            "device": 0,
+            "props": {
+              "mute": true,
+              "channelVolumes": [
+                1.0,
+                1.0
+              ],
+              "volumeBase": 0.000501,
+              "volumeStep": 1.5e-05,
+              "channelMap": [
+                "FL",
+                "FR"
+              ],
+              "softVolumes": [
+                1.0,
+                1.0
+              ],
+              "latencyOffsetNsec": 0
+            },
+            "devices": [
+              0
+            ],
+            "profile": 1,
+            "save": false
+          },
+          {
+            "index": 2,
+            "direction": "Output",
+            "name": "analog-output-speaker",
+            "description": "Alto-falantes",
+            "priority": 10000,
+            "available": "unknown",
+            "info": [
+              6,
+              "port.type",
+              "speaker",
+              "port.availability-group",
+              "Legacy 3",
+              "device.icon_name",
+              "audio-speakers",
+              "card.profile.port",
+              "2",
+              "route.hw-mute",
+              "true",
+              "route.hw-volume",
+              "true"
+            ],
+            "profiles": [
+              2,
+              1
+            ],
+            "device": 3,
+            "props": {
+              "mute": false,
+              "channelVolumes": [
+                1.0,
+                1.0
+              ],
+              "volumeBase": 1.0,
+              "volumeStep": 1.5e-05,
+              "channelMap": [
+                "FL",
+                "FR"
+              ],
+              "softVolumes": [
+                1.0,
+                1.0
+              ],
+              "latencyOffsetNsec": 0
+            },
+            "devices": [
+              3
+            ],
+            "profile": 1,
+            "save": true
+          }
+        ],
+        "EnumRoute": [
+          {
+            "index": 0,
+            "direction": "Input",
+            "name": "analog-input-internal-mic",
+            "description": "Microfone interno",
+            "available": "unknown",
+            "profiles": [
+              3,
+              1
+            ],
+            "devices": [
+              0
+            ]
+          },
+          {
+            "index": 1,
+            "direction": "Input",
+            "name": "analog-input-mic",
+            "description": "Microfone",
+            "available": "no",
+            "profiles": [
+              3,
+              1
+            ],
+            "devices": [
+              0
+            ]
+          },
+          {
+            "index": 2,
+            "direction": "Output",
+            "name": "analog-output-speaker",
+            "description": "Alto-falantes",
+            "available": "unknown",
+            "profiles": [
+              2,
+              1
+            ],
+            "devices": [
+              3
+            ]
+          },
+          {
+            "index": 3,
+            "direction": "Output",
+            "name": "analog-output-headphones",
+            "description": "Fones de ouvido",
+            "available": "no",
+            "profiles": [
+              2,
+              1
+            ],
+            "devices": [
+              3
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 52,
+    "type": "PipeWire:Interface:Node",
+    "info": {
+      "state": "suspended",
+      "props": {
+        "object.serial": 67,
+        "node.name": "alsa_output.pci-0000_00_1b.0.analog-stereo",
+        "node.description": "Áudio interno Estéreo analógico",
+        "node.nick": "ALC282 Analog",
+        "media.class": "Audio/Sink",
+        "device.id": 51,
+        "device.api": "alsa",
+        "api.alsa.card.name": "HDA Intel PCH",
+        "api.alsa.path": "front:1",
+        "device.profile.name": "analog-stereo",
+        "card.profile.device": 3
+      },
+      "params": {
+        "Props": [
+          {
+            "volume": 1.0,
+            "mute": false,
+            "channelVolumes": [
+              1.0,
+              1.0
+            ],
+            "channelMap": [
+              "FL",
+              "FR"
+            ],
+            "softMute": false,
+            "softVolumes": [
+              1.0,
+              1.0
+            ],
+            "monitorMute": false,
+            "monitorVolumes": [
+              1.0,
+              1.0
+            ],
+            "params": [
+              "monitor.channel-volumes",
+              false,
+              "channelmix.disable",
+              false,
+              "channelmix.min-volume",
+              0.0,
+              "channelmix.max-volume",
+              10.0,
+              "channelmix.normalize",
+              false,
+              "channelmix.mix-lfe",
+              true,
+              "channelmix.upmix",
+              true,
+              "channelmix.lfe-cutoff",
+              0.0,
+              "channelmix.fc-cutoff",
+              0.0,
+              "channelmix.rear-delay",
+              0.0,
+              "channelmix.stereo-widen",
+              0.0,
+              "channelmix.hilbert-taps",
+              0,
+              "channelmix.upmix-method",
+              "none",
+              "resample.quality",
+              4,
+              "resample.disable",
+              false,
+              "dither.noise",
+              0,
+              "dither.method",
+              "none",
+              "debug.wav-path",
+              "",
+              "channelmix.lock-volumes",
+              false,
+              "audioconvert.filter-graph.disable",
+              false,
+              "audioconvert.filter-graph",
+              ""
+            ]
+          },
+          {
+            "device": "front:1",
+            "deviceName": "",
+            "cardName": "",
+            "latencyOffsetNsec": 0,
+            "params": [
+              "audio.channels",
+              2,
+              "audio.rate",
+              0,
+              "audio.format",
+              "UNKNOWN",
+              "audio.position",
+              "[ FL, FR ]",
+              "audio.allowed-rates",
+              "[  ]",
+              "api.alsa.period-size",
+              0,
+              "api.alsa.period-num",
+              0,
+              "api.alsa.headroom",
+              0,
+              "api.alsa.start-delay",
+              0,
+              "api.alsa.disable-mmap",
+              false,
+              "api.alsa.disable-batch",
+              false,
+              "api.alsa.disable-tsched",
+              false,
+              "api.alsa.use-chmap",
+              false,
+              "api.alsa.multi-rate",
+              true,
+              "api.alsa.htimestamp",
+              false,
+              "api.alsa.htimestamp.max-errors",
+              64,
+              "latency.internal.rate",
+              0,
+              "latency.internal.ns",
+              0,
+              "clock.name",
+              "api.alsa.p-1"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 63,
+    "type": "PipeWire:Interface:Node",
+    "info": {
+      "state": "suspended",
+      "props": {
+        "object.serial": 68,
+        "node.name": "alsa_input.pci-0000_00_1b.0.analog-stereo",
+        "node.description": "Áudio interno Estéreo analógico",
+        "node.nick": "ALC282 Analog",
+        "media.class": "Audio/Source",
+        "device.id": 51,
+        "device.api": "alsa",
+        "api.alsa.card.name": "HDA Intel PCH",
+        "api.alsa.path": "front:1",
+        "device.profile.name": "analog-stereo",
+        "card.profile.device": 0
+      },
+      "params": {
+        "Props": [
+          {
+            "volume": 1.0,
+            "mute": false,
+            "channelVolumes": [
+              1.0,
+              1.0
+            ],
+            "channelMap": [
+              "FL",
+              "FR"
+            ],
+            "softMute": false,
+            "softVolumes": [
+              1.0,
+              1.0
+            ],
+            "monitorMute": false,
+            "monitorVolumes": [
+              1.0,
+              1.0
+            ],
+            "params": [
+              "monitor.channel-volumes",
+              false,
+              "channelmix.disable",
+              false,
+              "channelmix.min-volume",
+              0.0,
+              "channelmix.max-volume",
+              10.0,
+              "channelmix.normalize",
+              false,
+              "channelmix.mix-lfe",
+              true,
+              "channelmix.upmix",
+              true,
+              "channelmix.lfe-cutoff",
+              0.0,
+              "channelmix.fc-cutoff",
+              0.0,
+              "channelmix.rear-delay",
+              0.0,
+              "channelmix.stereo-widen",
+              0.0,
+              "channelmix.hilbert-taps",
+              0,
+              "channelmix.upmix-method",
+              "none",
+              "resample.quality",
+              4,
+              "resample.disable",
+              false,
+              "dither.noise",
+              0,
+              "dither.method",
+              "none",
+              "debug.wav-path",
+              "",
+              "channelmix.lock-volumes",
+              false,
+              "audioconvert.filter-graph.disable",
+              false,
+              "audioconvert.filter-graph",
+              ""
+            ]
+          },
+          {
+            "device": "front:1",
+            "deviceName": "",
+            "cardName": "",
+            "latencyOffsetNsec": 0,
+            "params": [
+              "audio.channels",
+              2,
+              "audio.rate",
+              0,
+              "audio.format",
+              "UNKNOWN",
+              "audio.position",
+              "[ FL, FR ]",
+              "audio.allowed-rates",
+              "[  ]",
+              "api.alsa.period-size",
+              0,
+              "api.alsa.period-num",
+              0,
+              "api.alsa.headroom",
+              0,
+              "api.alsa.start-delay",
+              0,
+              "api.alsa.disable-mmap",
+              false,
+              "api.alsa.disable-batch",
+              false,
+              "api.alsa.disable-tsched",
+              false,
+              "api.alsa.use-chmap",
+              false,
+              "api.alsa.multi-rate",
+              true,
+              "api.alsa.htimestamp",
+              false,
+              "api.alsa.htimestamp.max-errors",
+              64,
+              "latency.internal.rate",
+              0,
+              "latency.internal.ns",
+              0,
+              "clock.name",
+              "api.alsa.c-1"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 62,
+    "type": "PipeWire:Interface:Node",
+    "info": {
+      "state": "suspended",
+      "props": {
+        "object.serial": 97,
+        "node.name": "alsa_output.pci-0000_00_03.0.hdmi-stereo",
+        "node.description": "Áudio interno Estéreo digital (HDMI)",
+        "node.nick": "SAMSUNG",
+        "media.class": "Audio/Sink",
+        "device.id": 49,
+        "device.api": "alsa",
+        "api.alsa.card.name": "HDA Intel HDMI",
+        "api.alsa.path": "hdmi:2",
+        "device.profile.name": "hdmi-stereo",
+        "card.profile.device": 3
+      },
+      "params": {
+        "Props": [
+          {
+            "volume": 1.0,
+            "mute": false,
+            "channelVolumes": [
+              0.063997,
+              0.063997
+            ],
+            "channelMap": [
+              "FL",
+              "FR"
+            ],
+            "softMute": false,
+            "softVolumes": [
+              0.063997,
+              0.063997
+            ],
+            "monitorMute": false,
+            "monitorVolumes": [
+              1.0,
+              1.0
+            ],
+            "params": [
+              "monitor.channel-volumes",
+              false,
+              "channelmix.disable",
+              false,
+              "channelmix.min-volume",
+              0.0,
+              "channelmix.max-volume",
+              10.0,
+              "channelmix.normalize",
+              false,
+              "channelmix.mix-lfe",
+              true,
+              "channelmix.upmix",
+              true,
+              "channelmix.lfe-cutoff",
+              0.0,
+              "channelmix.fc-cutoff",
+              0.0,
+              "channelmix.rear-delay",
+              0.0,
+              "channelmix.stereo-widen",
+              0.0,
+              "channelmix.hilbert-taps",
+              0,
+              "channelmix.upmix-method",
+              "none",
+              "resample.quality",
+              4,
+              "resample.disable",
+              false,
+              "dither.noise",
+              0,
+              "dither.method",
+              "none",
+              "debug.wav-path",
+              "",
+              "channelmix.lock-volumes",
+              false,
+              "audioconvert.filter-graph.disable",
+              false,
+              "audioconvert.filter-graph",
+              ""
+            ]
+          },
+          {
+            "device": "hdmi:2",
+            "deviceName": "",
+            "cardName": "",
+            "latencyOffsetNsec": 0,
+            "iec958Codecs": [
+              "PCM"
+            ],
+            "params": [
+              "audio.channels",
+              2,
+              "audio.rate",
+              0,
+              "audio.format",
+              "UNKNOWN",
+              "audio.position",
+              "[ FL, FR ]",
+              "audio.allowed-rates",
+              "[  ]",
+              "api.alsa.period-size",
+              0,
+              "api.alsa.period-num",
+              0,
+              "api.alsa.headroom",
+              0,
+              "api.alsa.start-delay",
+              0,
+              "api.alsa.disable-mmap",
+              false,
+              "api.alsa.disable-batch",
+              false,
+              "api.alsa.disable-tsched",
+              false,
+              "api.alsa.use-chmap",
+              false,
+              "api.alsa.multi-rate",
+              true,
+              "api.alsa.htimestamp",
+              false,
+              "api.alsa.htimestamp.max-errors",
+              64,
+              "latency.internal.rate",
+              0,
+              "latency.internal.ns",
+              0,
+              "clock.name",
+              "api.alsa.p-2"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 111,
+    "type": "PipeWire:Interface:Node",
+    "info": {
+      "state": "idle",
+      "props": {
+        "object.serial": 1046,
+        "node.name": "Firefox",
+        "media.class": "Stream/Output/Audio",
+        "application.name": "Firefox",
+        "application.process.id": 6406
+      },
+      "params": {
+        "Props": [
+          {
+            "volume": 1.0,
+            "mute": false,
+            "channelVolumes": [
+              0.959988,
+              0.959988
+            ],
+            "channelMap": [
+              "FL",
+              "FR"
+            ],
+            "softMute": false,
+            "softVolumes": [
+              1.0,
+              1.0
+            ],
+            "monitorMute": false,
+            "monitorVolumes": [
+              1.0,
+              1.0
+            ],
+            "params": [
+              "monitor.channel-volumes",
+              false,
+              "channelmix.disable",
+              false,
+              "channelmix.min-volume",
+              0.0,
+              "channelmix.max-volume",
+              10.0,
+              "channelmix.normalize",
+              false,
+              "channelmix.mix-lfe",
+              true,
+              "channelmix.upmix",
+              true,
+              "channelmix.lfe-cutoff",
+              0.0,
+              "channelmix.fc-cutoff",
+              0.0,
+              "channelmix.rear-delay",
+              0.0,
+              "channelmix.stereo-widen",
+              0.0,
+              "channelmix.hilbert-taps",
+              0,
+              "channelmix.upmix-method",
+              "none",
+              "resample.quality",
+              4,
+              "resample.disable",
+              false,
+              "dither.noise",
+              0,
+              "dither.method",
+              "none",
+              "debug.wav-path",
+              "",
+              "channelmix.lock-volumes",
+              false,
+              "audioconvert.filter-graph.disable",
+              false,
+              "audioconvert.filter-graph",
+              ""
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 44,
+    "type": "PipeWire:Interface:Metadata",
+    "props": {
+      "client.id": 34,
+      "factory.id": 7,
+      "metadata.name": "default",
+      "module.id": 6,
+      "object.serial": 44
+    },
+    "metadata": [
+      {
+        "subject": 0,
+        "key": "default.configured.audio.sink",
+        "type": "Spa:String:JSON",
+        "value": {
+          "name": "alsa_output.pci-0000_00_03.0.hdmi-stereo"
+        }
+      },
+      {
+        "subject": 0,
+        "key": "default.configured.audio.source",
+        "type": "Spa:String:JSON",
+        "value": {
+          "name": "filtro_ruido_noise"
+        }
+      },
+      {
+        "subject": 0,
+        "key": "default.audio.sink",
+        "type": "Spa:String:JSON",
+        "value": {
+          "name": "alsa_output.pci-0000_00_03.0.hdmi-stereo"
+        }
+      },
+      {
+        "subject": 0,
+        "key": "default.audio.source",
+        "type": "Spa:String:JSON",
+        "value": {
+          "name": "filtro_ruido_noise"
+        }
+      },
+      {
+        "subject": 111,
+        "key": "target.object",
+        "type": "Spa:String",
+        "value": "alsa_output.pci-0000_00_03.0.hdmi-stereo"
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "type": "PipeWire:Interface:Link",
+    "info": {
+      "output-node-id": 111,
+      "input-node-id": 62,
+      "state": "init"
+    }
+  }
+]

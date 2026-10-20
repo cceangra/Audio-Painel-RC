@@ -1,26 +1,89 @@
 # Guia de GitHub — Áudio Painel RC
 
-## Onde estão os arquivos?
+## 1. Criar o repositório
 
-Abra a aba **Code** do repositório e navegue pelas pastas. O `README.md` explica o projeto; `docs/` documenta os módulos; `src/` é a pasta reservada ao código-fonte.
+1. Acesse `https://github.com/new` com sua conta do GitHub.
+2. Nome: `Audio-Painel-RC` (sem acentos, para facilitar comandos).
+3. Selecione **Privado** para revisar o código antes da publicação, ou **Público**
+   se quiser disponibilizá-lo desde o início.
+4. **Não** marque README, `.gitignore` ou licença adicionais: estes arquivos já existem.
+5. Clique **Create repository** e copie a URL HTTPS exibida.
 
-## O que significam os commits?
+## 2. Publicar os fontes organizados (Q4OS)
 
-Cada commit registra um conjunto de alterações, com descrição. Abra **Commits** para consultar o histórico e recuperar uma versão anterior.
+Instale `git` apenas se ainda não estiver disponível. Extraia o ZIP de **fontes**
+recebido desta organização em uma pasta de trabalho. Abra o terminal dentro dela.
+Os comandos a seguir não usam `sudo`.
 
-## Como manter versões seguras?
+```bash
+cd /CAMINHO/DA/PASTA/Audio-Painel-RC
 
-- **main**: versão considerada estável.
-- **melhoria-interface**: ajustes visuais.
-- **melhoria-audio**: desenvolvimento de funções de áudio.
-- **melhoria-instalador**: alterações na instalação e remoção.
+git init -b main
+git config user.name "Seu Nome ou Apelido"
+git config user.email "seu-email-de-commits@example.com"
+git add .
+git commit -m "Organizar código-fonte do Áudio Painel RC 0.3.0"
+git remote add origin https://github.com/SEU_USUARIO/Audio-Painel-RC.git
+git push -u origin main
+```
 
-Use **Pull requests** para comparar uma melhoria com `main` antes de mesclar. Para uma versão publicada, use **Releases** e tags como `v0.3.0`.
+Substitua os exemplos pelo caminho, usuário e e-mail desejados. Se o Git pedir
+autenticação, use o método de autenticação recomendado pelo GitHub (gerenciador
+de credenciais ou SSH). **Nunca coloque senhas ou tokens dentro dos arquivos do projeto.**
 
-## Como atualizar com o ChatGPT?
+## 3. Atualizar o projeto depois
 
-Peça explicitamente a alteração desejada e o repositório `cceangra/Audio-Painel-RC`. Prefira mudanças isoladas, com testes, documentação e um commit descritivo. O código C++ deve ser importado integralmente antes de realizar alterações funcionais.
+Antes de editar:
 
-## Importante
+```bash
+git pull --ff-only
+```
 
-O código-fonte no GitHub **não instala nenhum programa automaticamente** no computador. Ter o projeto aqui significa manter o código versionado, não executar o aplicativo.
+Crie um branch para cada mudança:
+
+```bash
+git switch -c melhoria/tema-escuro
+# Edite os arquivos, compile e teste.
+bash compilar.sh
+bash testar.sh
+bash testar-instalacao.sh
+bash testar-integracao.sh
+git status --short
+git add src/ docs/
+git commit -m "Melhorar aparência do tema escuro"
+git push -u origin melhoria/tema-escuro
+```
+
+Abra um **Pull Request** no GitHub para comparar o branch com `main` antes de
+incorporar a mudança. Não use `git add -f` em executáveis, arquivos de instalação
+ou dados locais ignorados.
+
+## 4. Publicar um ZIP para usuários finais
+
+No seu computador Linux, na pasta do projeto:
+
+```bash
+bash compilar.sh
+```
+
+O processo compila e gera o manifesto do instalador. Confira os testes e monte
+um ZIP da pasta **sem `.git` nem dados pessoais** para anexar em
+**GitHub → Releases → Draft a new release**. O ZIP enviado nesta conversa já
+inclui um pacote pronto, criado a partir desta versão organizada.
+
+## 5. O que significam os termos
+
+- **Repositório:** pasta do projeto com histórico na nuvem.
+- **Commit:** registro de uma alteração.
+- **Branch:** linha de desenvolvimento independente.
+- **Pull Request:** comparação/revisão antes de integrar o código.
+- **Release:** versão de distribuição para as pessoas baixarem.
+
+## 6. Cuidados
+
+- Código-fonte vai no repositório. Os arquivos `audio-painel-rc` e `Iniciar`
+  são gerados na compilação, por isso ficam fora do histórico.
+- Não publique preferências pessoais, logs, gravações nem backups de instalação.
+- `src/interface/tema.cpp` é o ponto inicial recomendado para ajustes visuais.
+- Não execute `git reset --hard`, `git push --force` ou exclusões em massa como
+  maneira de organizar o repositório.

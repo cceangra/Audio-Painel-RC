@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "layout": 4,
+  "theme": "dark",
+  "accent": "#91a8ff",
+  "opacity": 0.94,
+  "density": "normal",
+  "width": 560,
+  "font": 12,
+  "radius": 14,
+  "rows": 4,
+  "hide_leave": true,
+  "hide_delay": 350,
+  "margin": 12,
+  "gap": 3,
+  "animation": true,
+  "release_seconds": 20
+}
