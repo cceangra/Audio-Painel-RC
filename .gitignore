@@ -1,0 +1,29 @@
+# Executáveis e compilação
+/audio-painel-rc
+/Iniciar
+/ARQUIVOS.txt
+/SHA256SUMS.txt
+/.compilacao-*/
+*.o
+*.so
+*.a
+/build/
+/dist/
+
+# Estado local do aplicativo e do instalador
+/instalador/
+/instalacao.json
+/integracoes.json
+/RELATORIO-INSTALACAO.txt
+/.instalacao-pendente-*/
+/testes/io-*/
+/testes/instalador-*/
+/testes/remocao-*/
+/testes/protecao-*/
+
+# Temporários
+*.swp
+*.swo
+*~
+.DS_Store
+__pycache__/
