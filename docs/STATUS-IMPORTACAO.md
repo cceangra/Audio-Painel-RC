@@ -1,13 +1,15 @@
-# Situação da importação do Áudio Painel RC
+# Situação da importação — Áudio Painel RC 0.3.0
 
-Este repositório começou a ser organizado e documentado, mas **a importação completa do código-fonte da versão 0.3.0 ainda não terminou**.
+O projeto está **parcialmente importado** no GitHub.
 
-## Arquivos já publicados
+## Já no repositório
+- Documentação inicial em português, plano de trabalho e .gitignore.
+- Código original `src/interface/componentes.cpp`, `src/incluir/tema.hpp` e `src/incluir/setup.hpp`.
+- Lançadores `iniciar.sh`, `Instalar.sh` e scripts `testar.sh`, `testar-instalacao.sh`.
 
-Os arquivos presentes em `src/` são partes reais da versão organizada, mas **não constituem ainda uma aplicação compilável**. Os diretórios planejados estão descritos em `docs/ARQUITETURA.md`.
+## Ainda faltam
+Os demais módulos em `src/aplicacao/`, `src/audio/`, `src/interface/`, `src/instalador/`, `src/sistema/`, `src/ferramentas/`, `src/testes/`, os cabeçalhos restantes, o script `compilar.sh`, `scripts/`, os recursos `icones/`, `previas/` e documentos originais. O pacote de fontes possui **77 arquivos** no total e o repositório ainda não os contém todos.
 
-## Arquivos ainda necessários
+**Não compile, distribua ou crie Release a partir desta cópia parcial.** A cópia ZIP de fontes continua sendo a referência para esta versão até que a importação seja concluída e validada.
 
-Importar os demais módulos `src/aplicacao/`, `src/audio/`, `src/interface/`, `src/sistema/`, `src/instalador/`, `src/ferramentas/` e `src/testes/`, além dos cabeçalhos, scripts de compilação, ícones, testes e prévias. Só depois conferir integridade, compilar e ativar integração contínua.
-
-**Não crie uma Release a partir deste estado parcial.** A organização inicial não substitui o ZIP v0.3.0 existente.
+As alterações devem preservar todo o código original e o funcionamento do instalador. Nenhum arquivo do computador foi alterado por esta importação.
